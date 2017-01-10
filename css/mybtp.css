@@ -1,0 +1,510 @@
+body{font-family: "Microsoft YaHei", 微软雅黑, sans-serif;}
+.navbar-collapse.in{
+    overflow: hidden;
+}
+.dig{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.dig-tr,
+.dig-wait{
+    transition: opacity 1s linear 0s;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.dig-wait{
+    border: 1px solid #666;
+    color:#666;
+    border-radius: 75px;
+    vertical-align: middle;
+    opacity: 0;
+    margin-left: -150px;
+    box-shadow: 0 0 3px 3px #d9edf7 inset,
+                0 0 6px 6px #23a4d5 inset,
+                0 0 10px 10px #a12565 inset,
+                0 10px 5px 2px rgba(0,0,0,0.8);
+    background-image:linear-gradient(#fff 10%,#888 100%);
+}
+
+.dig-wait ul{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dig:hover{
+    cursor: pointer;
+}
+
+.dig:hover .dig-tr{
+    opacity: 0;
+}
+
+.dig:hover .dig-wait{
+    opacity: 1;
+}
+
+.dig-tr p{
+    font-size: 75px;
+}
+
+/*定义导航条
+____________________________________________________________________________________________*/
+.title{
+    background: rgb(34,130,240);
+}
+.mynav{
+    margin:0;
+}
+.catalogue{
+    font-size: 0;
+    margin: 0;
+}
+.catalogue li{
+    display: inline-block;
+    font-size: 16px;
+}
+.catalogue li a{
+    padding:15px 10px;
+    margin: 0 5px;
+    color:white;
+    border-bottom: 2px solid transparent;
+    font-weight: bolder;
+    text-decoration: none;
+    line-height: 50px;
+}
+.catalogue li.active a{
+    border-bottom-color: rgb(34,200,200);
+}
+.catalogue li a:hover{
+    background: transparent;
+    color:white;
+    border-bottom-color: rgb(34,200,200);
+}
+.navbar-brand{
+    color:white;
+}
+.navbar-toggle,
+.navbar-toggle .icon-bar{
+    border:1px solid rgb(200,200,200)
+}
+@media screen and (max-width: 768px){
+    .catalogue{
+        float: left;
+    }
+    .catalogue li{
+        display: block;
+        text-align: center;
+    }
+}
+/*part one
+_____________________________________________________________________________*/
+#part-one{
+    background: rgb(34,130,240);
+    padding:30px 0 0 0;
+}
+/*part two
+_____________________________________________________________________________*/
+#part-two{
+    height: 600px;
+}
+.nevermore{
+    background-image: linear-gradient(45deg, #555 25%, transparent 25%, transparent),
+    linear-gradient(-45deg, #555 25%, transparent 25%, transparent),
+    linear-gradient(45deg,transparent 75%,#555 75%),
+    linear-gradient(-45deg,transparent 75%,#555 75%);
+    background-size: 50px 50px;
+    background-repeat: repeat;
+    height: 600px;
+    margin-bottom: -600px;
+}
+.lina{
+    background-image:repeating-radial-gradient(red, blue 20px, red 40px);
+    height: 600px;
+    opacity: 0.8;
+    padding:50px 0;
+    margin-bottom: -600px;
+}
+.btn-container{
+    margin-top: 80px;
+    text-align: center;
+}
+/*加好友按钮
+--------------*/
+.btn-friend{
+    border:1px solid white;
+    border-radius: 3px;
+    background: transparent;
+    text-align: center;
+    color:white;
+    line-height: 40px;
+    font-size: 18px;
+    width: 185px;
+    position: relative;
+    transition: all 0.3s ease-in;
+    display: inline-block;
+}
+.btn-friend .show-QR{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 185px;
+    height: 40px;
+    opacity: 0;
+}
+.btn-friend .show-QR:hover{
+    cursor: pointer;
+}
+.btn-friend:hover {
+    cursor: pointer;
+    background: white;
+    color:rgb(34,240,240);
+    text-decoration: none;
+}
+.btn-friend i{
+    display: inline-block;
+    margin-left: 8px;
+    width: 18px;
+    height: 18px;
+}
+.btn-friend:hover .QR{
+    display: block;
+}
+.btn-friend .show-QR:checked + .QR{
+    display: block;
+}
+.btn-friend .QR{
+    position: absolute;
+    top:52px;
+    left:72px;
+    width: 140px;
+    height: 140px;
+    border:1px solid black;
+    border-radius: 5px;
+    background: url(../css/img/liantu.png) 50% 50% no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease-in;
+    display: none;
+}
+.btn-friend .QR:after{
+    content: "";
+    position: absolute;
+    top:-10px;
+    left:60px;
+    width: 18px;
+    height: 18px;
+    transform: rotate(45deg);
+    border-left:1px solid black;
+    border-top:1px solid black;
+    background: white;
+}
+/*苹果下载按钮
+-------------------*/
+.btn-apple{
+    width: 185px;
+    line-height: 40px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    vertical-align: top;
+    color: white;
+    position:relative;
+    font-size: 16px;
+}
+
+.btn-apple:hover{
+    cursor: pointer;
+    color:rgb(34,240,240);
+    text-decoration: none;
+}
+
+.btn-apple .ico-apple{
+    margin-left: 8px;
+    vertical-align: middle;
+    width: 17px;
+    height: 20px;
+    display: inline-block;
+    background: url(../css/img/my-apple.png) left top no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease-in;
+}
+
+.btn-apple:hover .ico-apple{
+    background-position-y: -20px;
+}
+
+.btn-ico-r{
+    border:1px solid black;
+    background-color: white;
+    border-radius: 3px;
+    line-height: 40px;
+    text-align: center;
+    color:black;
+    display: inline-block;
+    position: relative;
+    padding:0 20px;
+    font-size: 16px;
+}
+
+.btn-ico-r i{
+    margin-right:6px;
+}
+
+.btn-ico-r:hover{
+    text-decoration: none;
+    background-color: #ddd;
+    color:#666;
+}
+/*搜索按钮
+-----------*/
+@media screen and (max-width: 600px){
+    .btn-search{
+        display: none;
+    }
+}
+
+.btn-search{
+    width: 500px;
+    height: 50px;
+    border:3px solid #2e33df;
+    margin: 200px auto;
+    position: relative;
+    font-size: 0;
+    box-sizing: content-box;
+}
+.btn-search input{
+    display: inline-block;
+    height: 100%;
+    width: 450px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border:none;
+    padding:0 10px;
+}
+.btn-search .icon{
+    float:right;
+    width:50px;
+    height: 100%;
+    border-left:2px solid black;
+    box-sizing: border-box;
+    font-size: 35px;
+    text-align: center;
+    background-color: cadetblue;
+}
+.btn-search .icon:hover{
+    cursor: pointer;
+}
+/*第三部分
+_____________________________________________________________________________*/
+#part-three{
+    height: 350px;
+    background-image:linear-gradient(158deg, #8a7e9f 0%,#debfb5 35%,#c39791 50%,#3f5381 100%);
+    padding: 30px 0;
+}
+
+.login-panel{
+    margin: 0 auto;
+    width: 217px;
+    height:250px;
+    opacity: 0.48;
+    border-top:1px solid #fff;
+    box-shadow: 0 0 4px 4px rgba(0,0,0,0.5);
+    background-color: #524c4e;
+    border-radius: 3px;
+}
+.login-panel .lg-title{
+    line-height: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+    text-align: center;
+    color: white;
+}
+.login-panel .lg-body{
+    border-top:1px solid #fff;
+}
+
+.lg-body .lg-name,
+.lg-body .lg-passworld{
+    border-bottom: 1px solid #fff;
+    width: 162px;
+    height: 34px;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.5) inset;
+    border-radius: 3px;
+    margin:18px auto;
+}
+
+.lg-body .lg-name i,
+.lg-body .lg-passworld i{
+    display: inline-block;
+    font-size: 18px;
+    color:white;
+    line-height: 33px;
+    padding:0 5px;
+}
+
+.lg-body .lg-name input,
+.lg-body .lg-passworld input{
+    border: none;
+    background: transparent;
+    display: inline-block;
+    height: 33px;
+    line-height: 33px;
+    color: white;
+    outline:none;
+    width: 125px;
+}
+
+.lg-body .lg-forget{
+    text-align: center;
+    margin-top: 25px;
+}
+
+.lg-body .lg-forget a{
+    color:white;
+}
+
+.lg-body .lg-forget a:hover{
+    text-decoration: none;
+}
+.lg-body .btn-login{
+    display: block;
+    margin:9px auto;
+    height: 34px;
+    width: 160px;
+    border-top:1px solid white;
+    border-radius: 3px;
+    line-height: 34px;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.5);
+    background-image: linear-gradient(0deg,#54761d 0%, #6a9324 100%);
+    text-align: center;
+    color:white;
+}
+
+.lg-body .btn-login:hover{
+    text-decoration: none;
+}
+
+/*part five
+_______________________________________________________________________________*/
+
+.myCarousel{
+    border:27px solid transparent;
+    border-image: url("img/border.png") 27 27 repeat;
+    height: 420px;
+    perspective: 800px;
+    position: relative;
+    width:1000px;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+.cl-img{
+    top:50px;
+    position:absolute;
+    width:200px;
+    height: 300px;
+    /*transform: matrix3d(1,0.24,0.2,0,0,1,0,0,0,0,1,0,0,0,0,2);*/
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-origin: 0% 50%;
+    transform:rotateY(59deg);
+    right: -199px;
+}
+
+/*.cl-img-0{*/
+    /*transform:rotateY(59deg);*/
+    /*right: -199px;*/
+/*}*/
+
+/*.cl-img-1{*/
+    /*transform: rotateY(-77deg);*/
+    /*left:0;*/
+/*}*/
+/*.*/
+
+/*.cl-img-2{*/
+    /*transform: rotateY(-77deg);*/
+    /*left: 150px;;*/
+/*}*/
+
+
+/*.cl-img-3{*/
+    /*transform: rotateY(-77deg);*/
+    /*left:300px;*/
+/*}*/
+
+
+/*.cl-img-4{*/
+    /*transform: rotateY(-77deg);*/
+    /*left: 450px;;*/
+/*}*/
+
+
+/*.cl-img-5{*/
+    /*transform: rotateY(-59deg);*/
+    /*right: 745px;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*最后一部分
+    _____________________________________________________________________________*/
+
+#part-last{
+    padding: 20px 0 80px;
+}
+.explain .tit{
+    font-size: 24px;
+    color:rgb(161, 161, 161);
+}
+.explain .item{
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in 0s;
+}
+.explain .item:hover{
+    padding-left: 5px;
+}
+.explain li a{
+    color:rgb(68,68,68);
+    line-height: 40px;
+}
+.explain li a:hover{
+    text-decoration: none;
+    color:#2a6496;
+}
+.explain li a:checked{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
