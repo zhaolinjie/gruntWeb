@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--<link rel="stylesheet" href="../css/base.css"/>-->
+    <!--<link rel="stylesheet" href="../css/ng_lea.css"/>-->
+    <!--<link rel="stylesheet" href="../plug/ng-progress/nprogress.css"/>-->
+    <!--<link rel="stylesheet" href="../plug/icheck/css/red.css"/>-->
+    <!--<link rel="stylesheet" href="../plug/datePicker/daterangepicker-bs3.css"/>-->
+    <!--<link rel="stylesheet" href="../plug/groupTree/css/jquery.orgchart.css">-->
+
+    <link rel="stylesheet" href="../css/flxGrunt.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../plug/datePicker/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../plug/groupTree/css/groopTreeFont.css">
+
+    <!--<script src="../js/angular.min.js"></script>-->
+    <!--<script src="../js/angular-route.min.js"></script>-->
+    <script src="../js/sea.js"></script>
+    <!--<script src="../js/ocLazyLoad.min.js"></script>-->
+    <script src="../js/tools/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!--tool-->
+    <!--<script src="../js/lodash.js"></script>-->
+    <!--<script src="../plug/datePicker/moment.js"></script>-->
+    <!--plug-->
+    <!--<script src="../plug/ng-progress/nprogress.js"></script>-->
+    <!--<script src="../plug/icheck/icheck.min.js"></script>-->
+    <!--<script src="../plug/pagenation/tm.pagination.js"></script>-->
+    <!--<script src="../plug/datePicker/daterangepicker.js"></script>-->
+    <!--map-->
+    <!--<script type="text/javascript"  src="http://api.map.baidu.com/api?v=2.0&ak=XHTIYgiszMmfkMvQiA3wlrGkG8EbnQlp"></script>-->
+
+    <!--seajs-->
+</head>
+<body>
+<div class="header">赵林杰的angular网站</div>
+<div class="home-content" ng-controller="viewChangeController">
+    <!--ng-controller="MyController"-->
+    <ul class="func-list" >
+        <li class="item active" style="z-index: 9"><a href="#/login">登录</a></li>
+        <li class="item" style="z-index: 8"><a href="#/total">架构</a></li>
+        <li class="item" style="z-index: 7"><a href="#/check">插件</a></li>
+        <li class="item" style="z-index: 6"><a href="#/grade">成绩</a></li>
+        <li class="item" style="z-index: 5"><a href="#/multiple">富文本</a></li>
+        <li class="item" style="z-index: 4"><a href="#/map">地图</a></li>
+        <li class="item" style="z-index: 3"><a href="#/print">打印</a></li>
+    </ul>
+    <div ng-view></div>
+</div>
+<div class="footer">公司地址@世纪大道2001号</div>
+<!--<script type="text/javascript" src="../js/ng-learn/factorys/ng-factory.js"></script>-->
+<!--<script type="text/javascript" src="../js/ng-learn/directives/ng-icheck.js"></script>-->
+<!--<script type="text/javascript" src="../js/ng-learn/controllers/ng-controller.js"></script>-->
+<!--<script type="text/javascript" src="../js/ng-learn/ng-main.js"></script>-->
+<script>
+    seajs.config({
+        base:"../",
+        alias: {
+            '$': 'js/tools/jquery',
+            "loadsh":"js/tools/lodash",
+            "moment":"plug/dataPicker/moment"
+        }
+    });
+    seajs.use("js/main");
+</script>
+</body>
+</html>

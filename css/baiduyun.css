@@ -1,0 +1,204 @@
+/*一些样式的标题*/
+.title{
+    border-bottom: 3px solid black;
+    padding-left: 20px;
+    margin:10px 0 10px 0;
+}
+
+.left{
+    width: 195px;
+    background-color: #eff4f8;
+    float: left;
+    height: 100%;
+}
+.right{
+    padding-left:195px;
+    height: 100%;
+    border-bottom:1px solid #d8dfea;
+    box-sizing: border-box;
+}
+.r-head{
+    text-align: justify;
+    background-color: #eff4f8;
+    height: 60px;
+    line-height: 60px;
+    padding:0 10px 0 0;
+}
+
+.r-head .l-p{
+    display: inline-block;
+}
+
+.r-head .l-p span{
+    margin:0 25px;
+    position: relative;
+}
+
+
+.r-head .l-p span:hover{
+    color:#3b8cff;
+    cursor: pointer;
+}
+
+.r-head .l-p span:hover::after{
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 4px;
+    border-radius: 2px;
+    background: #3b8cff;
+    left: -3px;
+    top:27px;
+}
+
+.r-head .r-p{
+    display: inline-block;
+}
+
+.r-head .r-p span {
+    padding: 8px 15px;
+    background: #f8645c;
+    border-radius: 14px;
+    color:white;
+    font-size: 12px;
+}
+
+.r-head .r-p span:hover{
+    cursor: pointer;
+}
+
+.r-head .r-p i{
+    margin: 0 10px;
+}
+.r-head .r-p i:hover{
+    cursor: pointer;
+}
+.lgd li{
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    padding-left: 50px;
+}
+
+.lgd li i{
+    margin-left: -30px;
+    margin-right: 13px;
+}
+
+.lgd li:hover{
+    background-color: #e4e9ec;
+    color:#3b8cff;
+    cursor: pointer;
+}
+
+.r-body{
+    padding: 15px 25px 0 15px;
+}
+
+.r-body .btn {
+    border: 1px solid #c0d9fe;
+    color:#c0d9fe;
+}
+
+.r-body .btn-selected{
+    border-color:#3b8cff;
+    background: #3b8cff;
+    color:white;
+}
+
+.r-body .btn i{
+    margin-right: 13px;
+}
+
+.r-body i{
+    margin: 0 8px;
+}
+
+.addo-box{
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.addo-anim{
+    transition: width 1s linear 0s;
+    font-size: 16px;
+}
+
+.addo-one{
+    width: 100px;
+    height: 100%;
+    box-sizing: border-box;
+    border-left: 100px solid #2aabd2;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.addo-two{
+    width: 100px;
+    height: 100%;
+    box-sizing: border-box;
+    border-left: 100px solid #245269;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.addo-three{
+    width: 100px;
+    height: 100%;
+    box-sizing: border-box;
+    border-left: 100px solid #CC00FF;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.addo-box .addo-checked{
+    display: inline-block;
+    opacity:0;
+    margin-right: -100px;
+    width: 100px;
+    height: 100%;
+    position: relative;
+}
+
+.addo-checked:checked + .addo-one{
+    width: 300px;
+}
+
+.addo-checked:checked + .addo-two{
+    width: 300px;
+}
+
+.addo-checked:checked + .addo-three{
+    width: 300px;
+}
+.trans-box{
+    border:1px solid black;
+    height: 300px;
+    perspective: 500px;
+    position: relative;
+}
+.trans-box .elebox{
+    position:absolute;
+    margin-top:-100px;
+    margin-left:-50px;
+    width:100px;
+    height: 200px;
+    top:50%;
+    left:50%;
+    transform: rotateY(45deg);
+    /*-webkit-transform:rotateY(45deg) translateZ(0);*/
+    /*zoom: normal;*/
+}
+
+.trans-box .elebox .up{
+    height: 100px;
+    background-color: red;
+}
+.trans-box .elebox .down{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}

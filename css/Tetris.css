@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+}
+.tetris{
+    width:200px;
+    height: 400px;
+    border:1px solid blue;
+    background-color: black;
+    margin:60px auto 0;
+    font-size: 0;
+}
+.grid{
+    width:20px;
+    height: 20px;
+    box-sizing: border-box;
+    border:1px solid gray;
+    background-color: transparent;
+    border-radius: 3px;
+    display: inline-block;
+    transition: all 0.3s ease-in;
+}
+.btn-tetris{
+    margin-top: 20px;
+    margin-left: 300px;
+    padding: 8px 15px;
+}

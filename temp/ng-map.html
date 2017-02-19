@@ -1,0 +1,16 @@
+<div ng-controller="mapController">
+    <div class="container">
+        <span>出行方式</span>
+        <select class="go-away" ng-model="travelWay">
+            <option value="walking" selected>步行</option>
+            <option value="driving">自驾</option>
+            <option value="transit">公交</option>
+        </select>
+        <span>起点</span>
+        <input ng-model="startPosition" type="text" placeholder="起点" class="start-point">
+        <span>终点</span>
+        <input ng-model="endPosition" type="text" placeholder="终点" class="end-point">
+        <button ng-click="search_path()">查询</button>
+    </div>
+    <div my-baidu-map class="my-map" id="myMap"></div>
+</div>

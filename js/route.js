@@ -1,0 +1,45 @@
+/**
+ * Created by Administrator on 2016/11/12.
+ */
+define(function(require,exports,module){
+    module.exports = {
+        defaultRoute:"/login",
+        routes:{
+            '/login':{
+                templateUrl:"../temp/ng-login.html",
+                controller:"loginController",
+                dependencies:"js/controllers/login"
+            },
+            '/map':{
+                templateUrl:"../temp/ng-map.html",
+                controller:"mapController",
+                dependencies:"js/controllers/mapController"
+            },
+            '/total':{
+                templateUrl:"../temp/ng-totle.html",
+                controller:'totleController',
+                dependencies:"js/controllers/totle"
+            },
+            '/check':{
+                templateUrl:"../temp/ng-icheck.html",
+                controller:"icheckController",
+                dependencies:"js/controllers/check-date"
+            },
+            '/grade':{
+                templateUrl:"../temp/ng-table.html",
+                controller:"GradesController",
+                dependencies:"js/controllers/gradesController"
+            },
+            '/multiple':{
+                templateUrl:"../temp/ng-multiple.html",
+                controller:"textEditController",
+                dependencies:"js/controllers/textEditController"
+            },
+            '/print':{
+                templateUrl:"../temp/ng-print.html",
+                controller:"printController",
+                dependencies:"js/controllers/printController"
+            }
+        }
+    }
+})

@@ -1,0 +1,33 @@
+<div class="container">
+    <form class="login-form" ng-controller="loginController" ng-submit="login()" name="myLogin_form">
+        <div class="back-opacity"></div>
+        <div class="user-input">
+            <div class="user-msg">
+                用户名: <input type="text" placeholder="请输入名字" name="name" ng-model="user.name" ng-minlength="2" ng-maxlength="4" required>
+            </div>
+            <div class="error">
+                <div ng-show="myLogin_form.name.$dirty && myLogin_form.name.$invalid && myLogin_form.submitted">
+                    <small ng-show="myLogin_form.name.$error.required">请输入名字</small>
+                    <small ng-show="myLogin_form.name.$error.minlength">最少两个字</small>
+                    <small ng-show="myLogin_form.name.$error.maxlength">最多4个字</small>
+                </div>
+            </div>
+            <div class="user-msg">
+                密&emsp;码: <input type="password" name="password" placeholder="请输入密码" ng-minlength="6"
+                                 ng-maxlength="12" ng-model="user.password" ng-pattern="/[a-z0-9A-Z]/" required>
+            </div>
+            <div class="error">
+                <div  ng-show="myLogin_form.password.$dirty && myLogin_form.password.$invalid && myLogin_form.submitted">
+                    <small ng-show="myLogin_form.password.$error.required">请输入密码</small>
+                    <small ng-show="myLogin_form.password.$error.minlength">最少6个字符</small>
+                    <small ng-show="myLogin_form.password.$error.maxlength">最多12个字符</small>
+                    <small ng-show="myLogin_form.password.$error.pattern">只能输入数字和字母</small>
+                </div>
+            </div>
+        </div>
+        <div class="btn-home-login">
+            <button type="submit">登录</button>
+        </div>
+    </form>
+</div>
+

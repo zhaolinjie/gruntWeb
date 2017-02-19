@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的游戏</title>
+    <link rel="stylesheet" href="../css/Tetris.css">
+</head>
+<body>
+<p style="text-align: center">俄罗斯方块</p>
+<button class="btn-tetris">开始</button>
+<div class="tetris">
+
+</div>
+<script src="../js/tools/jquery.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/TetrisNew.js"></script>
+<script>
+    $(document).ready(function(){
+        new Tetris($('.tetris'))
+    })
+</script>
+</body>
+</html>

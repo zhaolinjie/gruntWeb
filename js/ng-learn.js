@@ -1,0 +1,20 @@
+/**
+ * Created by Administrator on 2016/10/18.
+ */
+angular.module("myApp",["ngRoute"])
+.config(['$routeProvider',function($routeProvider){
+    $routeProvider.when('/map',{
+            templateUrl:"../temp/ng-map.html"
+    })
+    .when('/login',{
+        templateUrl:"../temp/ng-login.html",
+        controller:'loginController'
+    }).when('/total',{
+        templateUrl:"../temp/ng-totle.html",
+        controller:'totleController'
+    }).when('/multiple',{
+        templateUrl:"../temp/ng-multiple.html"
+    }).otherwise({
+            redirectTo:'/login'
+    })
+}])
